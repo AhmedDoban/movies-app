@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import { Link, NavLink } from "react-router-dom";
 
-function Navbar() {
+function Navbar({ SetLogin }) {
   const [IsScrolled, SetIsScrolled] = useState(false);
   const [Active, SetActive] = useState(false);
   window.onscroll = () => {
     SetIsScrolled(window.pageYOffset === 0 ? false : true);
     return () => (window.onscroll = null);
+  };
+  const HandleLogout = () => {
+    localStorage.clear();
+    SetLogin(false);
   };
   return (
     <React.Fragment>
@@ -53,7 +57,7 @@ function Navbar() {
                   <Link>Setting</Link>
                 </li>
                 <li>
-                  <button>Logout</button>
+                  <button onClick={() => HandleLogout()}>Logout</button>
                 </li>
               </ul>
             </div>

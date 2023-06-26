@@ -15,20 +15,28 @@ function Landing() {
       >
         <div className="container">
           <div className="box">
-            <h1>{movie.Title}</h1>
-            <p>{movie.Plot}</p>
+            <h1 data-aos-duration="1000" data-aos="fade-down">
+              {movie.Title}
+            </h1>
+            <p data-aos-duration="1000" data-aos="zoom-in">
+              {movie.Plot}
+            </p>
             <p>
               {movie.Genre?.split(",").map((item) => (
-                <span>{item}</span>
+                <span data-aos-duration="1000" data-aos="zoom-in">
+                  {item}
+                </span>
               ))}
             </p>
-            <p className="Awards">{movie.Awards}</p>
+            <p className="Awards" data-aos-duration="1000" data-aos="zoom-in">
+              {movie.Awards}
+            </p>
             <div className="actions">
-              <button>
+              <button data-aos-duration="1000" data-aos="zoom-in">
                 <i className="fa-solid fa-play"></i>
                 paly
               </button>
-              <button>
+              <button data-aos-duration="1000" data-aos="zoom-in">
                 <i className="fa-solid fa-plus"></i>
                 My List
               </button>

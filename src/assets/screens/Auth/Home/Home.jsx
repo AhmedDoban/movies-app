@@ -1,16 +1,23 @@
 import React from "react";
 import "./Home.css";
 import Navbar from "../components/Navbar/Navbar";
-
 import Landing from "./landing/Landing";
-import Popular from "./Popular/Popular";
-function Home() {
+import SectionSlider from "../components/Section Slider/SectionSlider";
+
+function Home({ SetLogin }) {
   return (
     <React.Fragment>
       <div className="home">
-        <Navbar />
+        <Navbar SetLogin={SetLogin} />
         <Landing />
-        <Popular />
+        <SectionSlider start="0" end="8" main_titel="Popular" Style="Left" />
+        <SectionSlider start="2" end="16" main_titel="Trending" />
+        <SectionSlider
+          start="4"
+          end="16"
+          main_titel="official Box"
+          Style="Left"
+        />
       </div>
     </React.Fragment>
   );

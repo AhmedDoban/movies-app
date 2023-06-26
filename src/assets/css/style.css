@@ -98,6 +98,7 @@ p {
   writing-mode: vertical-lr;
   width: fit-content;
   padding: 150px 0 0 0;
+  text-transform: capitalize;
 }
 .main-titel::before {
   position: absolute;

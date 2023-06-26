@@ -15,7 +15,7 @@
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background-color: var(--dark-blue);
+  background-color: #000;
 }
 ::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.5);
@@ -24,7 +24,7 @@
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--main-color);
+  background: red;
 }
 
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
@@ -87,4 +87,25 @@ p {
   .container {
     width: 1170px;
   }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# General elements
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.main-titel {
+  position: relative;
+  color: #fff;
+  font-size: 35px;
+  writing-mode: vertical-lr;
+  width: fit-content;
+  padding: 150px 0 0 0;
+}
+.main-titel::before {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 150px;
+  background-color: #fff;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
 }

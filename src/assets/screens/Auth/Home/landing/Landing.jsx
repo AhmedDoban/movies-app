@@ -6,7 +6,7 @@ function Landing() {
   useEffect(() => {
     SetMovie(Movies.sort(() => Math.random() - 0.5)[0]);
   }, []);
-  console.log(movie);
+
   return (
     <React.Fragment>
       <div

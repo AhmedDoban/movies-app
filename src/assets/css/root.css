@@ -3,6 +3,8 @@
   --main-border-radius: 10px;
   --main-color: #0b0b0b;
   --main-alt-color: #11111111;
+  --main-padding-top: 50px;
+  --main-padding-bottom: 50px;
 }
 * {
   box-sizing: border-box;

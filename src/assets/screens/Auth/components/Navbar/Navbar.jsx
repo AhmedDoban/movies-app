@@ -27,16 +27,16 @@ function Navbar() {
                 <NavLink to="/">Homepage</NavLink>
               </li>
               <li>
-                <NavLink to="/Series">Series</NavLink>
+                <Link to="">Series</Link>
               </li>
               <li>
-                <NavLink to="/Movies">Movies</NavLink>
+                <Link to="">Movies</Link>
               </li>
               <li>
-                <NavLink to="/New and popular">New and popular</NavLink>
+                <Link to="">New and popular</Link>
               </li>
               <li>
-                <NavLink to="/my list">my list</NavLink>
+                <Link to="">my list</Link>
               </li>
             </ul>
           </div>

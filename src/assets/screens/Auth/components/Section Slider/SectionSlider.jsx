@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SectionSlider.css";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -7,6 +7,8 @@ import { Movies } from "../../../../../Movies_db.js";
 import { Link } from "react-router-dom";
 
 function SectionSlider({ start, end, main_titel, Style }) {
+  const [Progress, SetProgress] = useState(1);
+
   return (
     <React.Fragment>
       <div className="SectionSlider">
@@ -15,7 +17,7 @@ function SectionSlider({ start, end, main_titel, Style }) {
           <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             breakpoints={{
-              520: {
+              350: {
                 slidesPerView: 2,
               },
               640: {
@@ -23,10 +25,11 @@ function SectionSlider({ start, end, main_titel, Style }) {
               },
 
               992: {
-                slidesPerView: 4,
+                slidesPerView: 5,
               },
             }}
             spaceBetween={10}
+            onSlideChange={(e) => SetProgress(e.progress * 100)}
           >
             {Movies.slice(start, end).map((Movie, index) => (
               <SwiperSlide key={index}>
@@ -41,6 +44,9 @@ function SectionSlider({ start, end, main_titel, Style }) {
               </SwiperSlide>
             ))}
           </Swiper>
+          <div className="progress">
+            <span className="propress-per" style={{ height: `${Progress}%` }} />
+          </div>
         </div>
       </div>
     </React.Fragment>

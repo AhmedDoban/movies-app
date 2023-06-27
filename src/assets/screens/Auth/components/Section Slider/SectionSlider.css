@@ -20,7 +20,7 @@
   position: relative;
   display: flex;
   width: 100%;
-  height: 390px;
+  height: 300px;
   border-radius: var(--main-border-radius);
   overflow: hidden;
 }
@@ -30,4 +30,22 @@
   height: 100%;
   object-fit: cover;
   background-color: #fff;
+}
+.SectionSlider .progress {
+  position: relative;
+  min-width: 5px;
+  max-width: 5px;
+  height: 300px;
+  background-color: #fff;
+  border-radius: var(--main-border-radius);
+  overflow: hidden;
+  transition: var(--main-transition);
+}
+.SectionSlider .progress .propress-per {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: red;
+  transition: var(--main-transition);
 }

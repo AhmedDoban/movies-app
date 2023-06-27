@@ -89,12 +89,12 @@ p {
   }
 }
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
-# General elements
+# main titel 
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
 .main-titel {
   position: relative;
-  color: #fff;
-  font-size: 35px;
+  color: red;
+  font-size: 30px;
   writing-mode: vertical-lr;
   width: fit-content;
   padding: 150px 0 0 0;
@@ -105,7 +105,7 @@ p {
   content: "";
   width: 5px;
   height: 150px;
-  background-color: #fff;
+  background-color: red;
   top: -15px;
   left: 50%;
   transform: translateX(-50%);

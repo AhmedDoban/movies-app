@@ -36,11 +36,10 @@
 .register .top a {
   position: relative;
   width: 100px;
-  height: 30px;
+  height: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4px 12px;
   background-color: red;
   border: 0;
   border-radius: var(--main-border-radius);
@@ -95,20 +94,27 @@
 }
 .register .container .box {
   position: relative;
-  width: 100%;
-  background-color: #fff;
+  width: 500px;
+  max-width: 100%;
+  background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 5px;
   border-radius: 5px;
-  overflow: hidden;
 }
 .register .container .box input {
   position: relative;
+  display: flex;
   padding: 15px 12px;
   font-size: 16px;
   border: 0;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  backdrop-filter: blur(50px);
+  color: #fff;
 }
 .register .container .box button {
   position: relative;
@@ -117,10 +123,11 @@
   align-items: center;
   font-weight: bold;
   height: 100%;
-  width: fit-content;
+  width: 150px;
   padding: 8px 12px;
   border: 0;
   background-color: red;
   color: #fff;
   cursor: pointer;
+  border-radius: 5px;
 }

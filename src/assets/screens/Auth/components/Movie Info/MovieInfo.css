@@ -1,0 +1,368 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Movie Info
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.MovieInfo {
+  position: relative;
+  width: 100%;
+  padding: 55px 0 0 0;
+  min-height: 100vh;
+  color: var(--main-color);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+}
+.MovieInfo::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+.MovieInfo .container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  gap: 15px;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Movie Info Box
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.MovieInfo .container .box {
+  position: relative;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+@media (max-width: 720px) {
+  .MovieInfo .container .box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Movie Info left
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.MovieInfo .container .box .left img {
+  width: 250px;
+  height: 350px;
+  border-radius: calc(var(--main-border-radius) * 2);
+  object-fit: cover;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Movie Info box right
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.MovieInfo .container .box > .right {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Movie Info box right Top
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.MovieInfo .container .box > .right .top {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 15px;
+  transition: var(--main-transition);
+}
+@media (max-width: 992px) {
+  .MovieInfo .container .box > .right > .top {
+    flex-direction: column;
+  }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Movie Info box right top left
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.MovieInfo .container .box > .right .top > .left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.MovieInfo .container .box > .right .top > .left .Type {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #eee;
+}
+.MovieInfo .container .box > .right .top > .left .Type span {
+  color: red;
+}
+.MovieInfo .container .box > .right .top > .left .Titel {
+  position: relative;
+  font-size: 35px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.MovieInfo .container .box > .right .top > .left .Director {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  color: #eee;
+}
+.MovieInfo .container .box > .right .top > .left .Writer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  color: #eee;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Movie Info box right top right
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.MovieInfo .container .box > .right .top > .right {
+  position: relative;
+  min-width: 350px;
+  max-width: 350px;
+  height: 120px;
+  padding: 20px;
+  color: #fff;
+  backdrop-filter: blur(10px);
+}
+.MovieInfo .container .box > .right .top > .right::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 166, 0, 0.5) 10%,
+    transparent 69%
+  );
+  border-radius: 70px 0 0 70px;
+  backdrop-filter: blur(10px);
+  z-index: -1;
+  transition: var(--main-transition);
+}
+@media (max-width: 992px) {
+  .MovieInfo .container .box > .right .top > .right {
+    width: 100%;
+  }
+  .MovieInfo .container .box > .right .top > .right::before {
+    background-image: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 166, 0, 0.5) 30%,
+      transparent 69%
+    );
+    border-radius: 0;
+  }
+}
+.MovieInfo .container .box > .right .top > .right .top {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+  padding: 5px;
+  width: 100%;
+}
+.MovieInfo .container .box > .right .top > .right .top .Vote-box {
+  position: relative;
+  display: flex;
+  gap: 10px;
+}
+.MovieInfo .container .box > .right .top > .right .top .Vote-box h1 {
+  color: rgb(255, 196, 0);
+  transition: var(--main-transition);
+}
+.MovieInfo .container .box > .right .top > .right .top .Vote-box .Vote {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  color: lightgray;
+}
+.MovieInfo .container .box > .right .top > .right .top .Metascore-box {
+  position: relative;
+  border-left: 1px solid lightgray;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 30px;
+}
+.MovieInfo .container .box > .right .top > .right .top .Metascore-box p {
+  color: lightgray;
+}
+.MovieInfo .container .box > .right .top > .right .bottom {
+  position: relative;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: lightgray;
+}
+.MovieInfo .container .box > .right .top > .right .bottom i {
+  color: rgb(255, 196, 0);
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.MovieInfo .container .box > .right .top > .right .bottom i:hover {
+  font-weight: bold;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Movie Info box right top Awards
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.MovieInfo .container .box > .right .Awards {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #767676;
+  font-size: 14px;
+}
+.MovieInfo .container .box > .right .Awards span {
+  color: rgb(255, 196, 0);
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Movie Info bottom
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.MovieInfo .container > .bottom {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 20px 0;
+}
+@media (max-width: 720px) {
+  .MovieInfo .container > .bottom {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.MovieInfo .container > .bottom > .Actors {
+  position: relative;
+  width: fit-content;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 20px;
+}
+.MovieInfo .container > .bottom > .Actors span {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: brown;
+  color: #eee;
+  font-size: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.MovieInfo .container > .bottom > .Actors::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 200%;
+  height: 100%;
+  background-image: linear-gradient(
+    90deg,
+    transparent 10%,
+    rgba(255, 255, 255, 0.2) 69%
+  );
+  border-radius: 0 70px 70px 0;
+  backdrop-filter: blur(10px);
+}
+.MovieInfo .container > .bottom button {
+  position: relative;
+  padding: 12px 15px;
+  border-radius: 20px;
+  letter-spacing: 5px;
+  background-color: red;
+  color: #fff;
+  border: 1px solid red;
+  cursor: pointer;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Gallary
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Gallary {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: var(--main-padding-bottom);
+}
+.Gallary .main-titel {
+  writing-mode: horizontal-tb;
+  height: fit-content;
+  width: fit-content;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Gallary .main-titel::before {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 100%;
+  background-color: red;
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+}
+.Gallary .ImgGallary {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: var(--main-border-radius);
+}
+.Gallary .ImgGallary img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: #fff;
+}
+.Gallary .progress {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+  border-radius: var(--main-border-radius);
+  transition: var(--main-transition);
+  overflow: hidden;
+}
+.Gallary .progress .propress-per {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: red;
+  transition: var(--main-transition);
+}

@@ -35,7 +35,7 @@ function SectionSlider({ start, end, main_titel, Style }) {
               <SwiperSlide key={index}>
                 <Link
                   className="card"
-                  to="/"
+                  to={`/${Movie.id}`}
                   data-aos-duration="1000"
                   data-aos="zoom-in"
                 >

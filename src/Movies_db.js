@@ -1,5 +1,6 @@
 export const Movies = [
   {
+    id: 1,
     Title: "Interstellar",
     Year: "2014",
     Rated: "PG-13",
@@ -29,6 +30,7 @@ export const Movies = [
     ],
   },
   {
+    id: 2,
     ComingSoon: true,
     Title: "Assassin's Creed",
     Year: "2016",
@@ -60,6 +62,7 @@ export const Movies = [
     ],
   },
   {
+    id: 3,
     Title: "Avatar",
     Year: "2009",
     Rated: "PG-13",
@@ -89,6 +92,7 @@ export const Movies = [
     ],
   },
   {
+    id: 4,
     Title: "I Am Legend",
     Year: "2007",
     Rated: "PG-13",
@@ -119,6 +123,7 @@ export const Movies = [
     ],
   },
   {
+    id: 5,
     Title: "300",
     Year: "2006",
     Rated: "R",
@@ -147,6 +152,7 @@ export const Movies = [
     ],
   },
   {
+    id: 6,
     Title: "The Avengers",
     Year: "2012",
     Rated: "PG-13",
@@ -176,6 +182,7 @@ export const Movies = [
     ],
   },
   {
+    id: 7,
     Title: "The Wolf of Wall Street",
     Year: "2013",
     Rated: "R",
@@ -205,6 +212,7 @@ export const Movies = [
     ],
   },
   {
+    id: 8,
     Title: "Game of Thrones",
     Year: "2011–",
     Rated: "TV-MA",
@@ -235,6 +243,7 @@ export const Movies = [
     ],
   },
   {
+    id: 9,
     Title: "Vikings",
     Year: "2013–",
     Rated: "TV-14",
@@ -266,6 +275,7 @@ export const Movies = [
     ],
   },
   {
+    id: 10,
     Title: "Gotham",
     Year: "2014–",
     Rated: "TV-14",
@@ -296,6 +306,7 @@ export const Movies = [
     ],
   },
   {
+    id: 11,
     Title: "Power",
     Year: "2014–",
     Rated: "TV-MA",
@@ -326,6 +337,7 @@ export const Movies = [
     ],
   },
   {
+    id: 12,
     Title: "Narcos",
     Year: "2015–",
     Rated: "TV-MA",
@@ -356,6 +368,7 @@ export const Movies = [
     ],
   },
   {
+    id: 13,
     Title: "Breaking Bad",
     Year: "2008–2013",
     Rated: "TV-14",
@@ -386,6 +399,7 @@ export const Movies = [
     ],
   },
   {
+    id: 14,
     ComingSoon: true,
     Title: "Doctor Strange",
     Year: "2016",
@@ -416,6 +430,7 @@ export const Movies = [
     ],
   },
   {
+    id: 15,
     ComingSoon: true,
     Title: "Rogue One: A Star Wars Story",
     Year: "2016",
@@ -446,8 +461,8 @@ export const Movies = [
       "https://images-na.ssl-images-amazon.com/images/M/MV5BMjE3NTgxMDcyNV5BMl5BanBnXkFtZTgwMDExMTc1ODE@._V1_SX1777_CR0,0,1777,744_AL_.jpg",
     ],
   },
-
   {
+    id: 16,
     ComingSoon: true,
     Title: "Luke Cage",
     Year: "2016–",

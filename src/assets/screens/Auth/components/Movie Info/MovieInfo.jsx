@@ -7,7 +7,7 @@ import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-function MovieInfo() {
+function MovieInfo({ SetLogin }) {
   const Params = useParams();
   const [Data, SetData] = useState({});
   const [Progress, SetProgress] = useState(1);
@@ -20,7 +20,7 @@ function MovieInfo() {
 
   return (
     <React.Fragment>
-      <Navbar />
+      <Navbar SetLogin={SetLogin} />
       <div
         className="MovieInfo"
         style={{ backgroundImage: `url(${Data.Images})` }}

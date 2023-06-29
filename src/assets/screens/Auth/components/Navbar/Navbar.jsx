@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 function Navbar({ SetLogin }) {
+  const Navigate = useNavigate();
   const [IsScrolled, SetIsScrolled] = useState(false);
   const [Active, SetActive] = useState(false);
   window.onscroll = () => {
@@ -12,6 +13,7 @@ function Navbar({ SetLogin }) {
   const HandleLogout = () => {
     localStorage.clear();
     SetLogin(false);
+    Navigate("/");
   };
   return (
     <React.Fragment>

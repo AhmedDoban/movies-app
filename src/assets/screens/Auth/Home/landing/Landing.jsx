@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Movies } from "../../../../../Movies_db.js";
 import "./Landing.css";
+import { Link } from "react-router-dom";
 function Landing() {
   const [movie, SetMovie] = useState({});
   useEffect(() => {
@@ -22,8 +23,8 @@ function Landing() {
               {movie.Plot}
             </p>
             <p>
-              {movie.Genre?.split(",").map((item) => (
-                <span data-aos-duration="1000" data-aos="zoom-in">
+              {movie.Genre?.split(",").map((item, index) => (
+                <span data-aos-duration="1000" data-aos="zoom-in" key={index}>
                   {item}
                 </span>
               ))}
@@ -32,11 +33,20 @@ function Landing() {
               {movie.Awards}
             </p>
             <div className="actions">
-              <button data-aos-duration="1000" data-aos="zoom-in">
+              <Link
+                to={`/watch/${movie.id}`}
+                data-aos-duration="1000"
+                data-aos="zoom-in"
+                className="Action-btn"
+              >
                 <i className="fa-solid fa-play"></i>
                 paly
-              </button>
-              <button data-aos-duration="1000" data-aos="zoom-in">
+              </Link>
+              <button
+                data-aos-duration="1000"
+                data-aos="zoom-in"
+                className="Action-btn"
+              >
                 <i className="fa-solid fa-plus"></i>
                 My List
               </button>

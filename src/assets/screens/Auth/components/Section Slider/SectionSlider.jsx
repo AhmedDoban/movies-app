@@ -39,7 +39,29 @@ function SectionSlider({ start, end, main_titel, Style }) {
                   data-aos-duration="1000"
                   data-aos="zoom-in"
                 >
-                  <img src={Movie.Poster} alt="" />
+                  <img src={Movie.Poster} alt={Movie.Title} />
+                  <div className="Movie-OverFlow">
+                    <h1>{Movie.Title}</h1>
+                    <p>
+                      Released:
+                      <span>{Movie.Released}</span>
+                    </p>
+                    <p>
+                      time : <span>{Movie.Runtime}</span>
+                    </p>
+                    <p>
+                      Country : <span>{Movie.Country}</span>
+                    </p>
+                    <p>
+                      Language : <span>{Movie.Language}</span>
+                    </p>
+                    <p>
+                      Rated : <span>{Movie.Rated}</span>
+                    </p>
+                    <p>
+                      Year : <span>{Movie.Year}</span>
+                    </p>
+                  </div>
                 </Link>
               </SwiperSlide>
             ))}

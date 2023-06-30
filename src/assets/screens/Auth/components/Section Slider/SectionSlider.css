@@ -16,13 +16,55 @@
 .SectionSlider .container.left {
   flex-direction: row-reverse;
 }
+
 .SectionSlider .container .card {
   position: relative;
   display: flex;
   width: 100%;
   height: 300px;
+  cursor: pointer;
   border-radius: var(--main-border-radius);
   overflow: hidden;
+}
+
+.SectionSlider .container .card .Movie-OverFlow {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 10px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: var(--main-border-radius);
+  transition: var(--main-transition);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  opacity: 0;
+}
+.SectionSlider .container .Movie-OverFlow h1 {
+  position: relative;
+  color: red;
+  font-size: 20px;
+  text-align: center;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid lightgray;
+}
+.SectionSlider .container .Movie-OverFlow p {
+  position: relative;
+  font-size: 14px;
+  color: rgb(255, 196, 0);
+  font-weight: 600;
+}
+.SectionSlider .container .Movie-OverFlow p span {
+  position: relative;
+  color: #fff;
+  font-size: 12px;
+}
+.SectionSlider .container .card .Movie-OverFlow:hover {
+  opacity: 1;
+  z-index: 2;
 }
 .SectionSlider .container .card img {
   position: relative;
@@ -30,6 +72,7 @@
   height: 100%;
   object-fit: cover;
   background-color: #fff;
+  z-index: -1;
 }
 .SectionSlider .progress {
   position: relative;

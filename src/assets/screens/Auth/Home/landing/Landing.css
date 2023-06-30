@@ -72,7 +72,7 @@
   align-items: center;
   gap: 15px;
 }
-.landing .container .box .actions button {
+.landing .container .box .actions .Action-btn {
   position: relative;
   padding: 8px 15px;
   width: 150px;
@@ -90,7 +90,7 @@
   cursor: pointer;
   transition: var(--main-transition);
 }
-.landing .container .box .actions button:hover {
+.landing .container .box .actions .Action-btn:hover {
   background-color: red;
   border: 1px solid red;
 }

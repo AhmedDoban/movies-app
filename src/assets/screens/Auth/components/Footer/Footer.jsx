@@ -16,7 +16,7 @@ function Footer() {
               <i className="fa-brands fa-tiktok"></i>
             </div>
           </div>
-          <div class="box">
+          <div className="box">
             <h1>Company</h1>
             <ul>
               <li>About</li>
@@ -26,7 +26,7 @@ function Footer() {
               <li>Get in touch</li>
             </ul>
           </div>
-          <div class="box">
+          <div className="box">
             <h1>Products</h1>
             <ul>
               <li>About</li>
@@ -36,7 +36,7 @@ function Footer() {
               <li>Get in touch</li>
             </ul>
           </div>
-          <div class="box">
+          <div className="box">
             <h1>Accounts</h1>
             <ul>
               <li>About</li>

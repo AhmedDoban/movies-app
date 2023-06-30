@@ -291,7 +291,7 @@
   border-radius: 0 70px 70px 0;
   backdrop-filter: blur(10px);
 }
-.MovieInfo .container > .bottom button {
+.MovieInfo .container > .bottom a {
   position: relative;
   padding: 12px 15px;
   border-radius: 20px;
@@ -300,6 +300,10 @@
   color: #fff;
   border: 1px solid red;
   cursor: pointer;
+  transition: var(--main-transition);
+}
+.MovieInfo .container > .bottom a:hover {
+  background-color: rgb(207, 0, 0);
 }
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 # Gallary

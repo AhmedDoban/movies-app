@@ -11,6 +11,7 @@ function News({ start, end }) {
             <div
               className="box"
               style={{ backgroundImage: `url(${movie.Images})` }}
+              key={movie.id}
             >
               <div className="left">
                 <img src={movie.Images} alt="" />

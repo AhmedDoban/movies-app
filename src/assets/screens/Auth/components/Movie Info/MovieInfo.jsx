@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./MovieInfo.css";
 import Navbar from "../Navbar/Navbar";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Movies } from "../../../../../Movies_db";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -15,8 +15,6 @@ function MovieInfo({ SetLogin }) {
   useEffect(() => {
     SetData(Movies.filter((Mov) => Mov.id == Params.id)[0]);
   }, [Params.id]);
-
-  console.log(Data);
 
   return (
     <React.Fragment>
@@ -95,7 +93,7 @@ function MovieInfo({ SetLogin }) {
                   <span>{Ac}</span>
                 ))}
             </div>
-            <button>WAtch Now</button>
+            <Link to={`/watch/${Data.id}`}>WAtch Now</Link>
           </div>
           <div className="Gallary">
             <h1 className="main-titel">Screen Shots</h1>

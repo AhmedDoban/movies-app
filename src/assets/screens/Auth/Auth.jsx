@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { Outlet, Route, Routes } from "react-router-dom";
+import Watch from "./components/Watch/Watch";
 
 const Home = lazy(() => import("./Home/Home"));
 const MovieInfo = lazy(() => import("./components/Movie Info/MovieInfo"));
@@ -25,6 +26,7 @@ function Auth({ SetLogin }) {
               <Route path="" element={<Home SetLogin={SetLogin} />} />
               <Route path=":id" element={<MovieInfo SetLogin={SetLogin} />} />
             </Route>
+            <Route path="/watch/:id" element={<Watch />} />
           </Routes>
         </Suspense>
       </div>

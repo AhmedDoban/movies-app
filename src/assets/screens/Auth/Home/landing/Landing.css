@@ -18,7 +18,12 @@
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  background: linear-gradient(
+    0deg,
+    var(--main-color) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
 }
 
 .landing .container {
@@ -34,7 +39,6 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 10px;
 }
 @media (max-width: 992px) {
   .landing .container .box {
@@ -43,7 +47,7 @@
   }
 }
 .landing .container .box h1 {
-  color: red;
+  color: var(--red-color);
   font-size: 35px;
   font-weight: bold;
   margin-bottom: 15px;
@@ -62,7 +66,8 @@
 .landing .container .box p span {
   padding: 4px 12px;
   border-radius: 25px;
-  background-color: red;
+  font-size: 14px;
+  background-color: var(--red-color);
   backdrop-filter: blur(50px);
   color: #fff;
 }
@@ -74,23 +79,23 @@
 }
 .landing .container .box .actions .Action-btn {
   position: relative;
-  padding: 8px 15px;
+  padding: 10px 15px;
   width: 150px;
   border-radius: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: normal;
   letter-spacing: 2px;
   background-color: transparent;
   color: #fff;
-  border: 1px solid #fff;
+  border: 1px solid var(--red-color);
   cursor: pointer;
   transition: var(--main-transition);
 }
 .landing .container .box .actions .Action-btn:hover {
-  background-color: red;
-  border: 1px solid red;
+  background-color: var(--red-color);
+  border: 1px solid var(--red-color);
 }

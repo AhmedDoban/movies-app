@@ -44,7 +44,7 @@
 }
 .login .container .box p a {
   position: relative;
-  color: red;
+  color: var(--red-color);
 }
 .login .container .box .form {
   position: relative;
@@ -70,7 +70,7 @@
 .login .container .box .form button {
   position: relative;
   padding: 8px;
-  background-color: red;
+  background-color: var(--red-color);
   color: #fff;
   border: 0;
   cursor: pointer;

@@ -3,14 +3,14 @@ import "./MovieInfo.css";
 import Navbar from "../Navbar/Navbar";
 import { Link, useParams } from "react-router-dom";
 import { Movies } from "../../../../../Movies_db";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/pagination";
 
-function MovieInfo({ SetLogin }) {
+function MovieInfo({ SetLogin, IsScrolled }) {
   const Params = useParams();
   const [Data, SetData] = useState({});
-  const [Progress, SetProgress] = useState(1);
 
   useEffect(() => {
     SetData(Movies.filter((Mov) => Mov.id == Params.id)[0]);
@@ -18,7 +18,7 @@ function MovieInfo({ SetLogin }) {
 
   return (
     <React.Fragment>
-      <Navbar SetLogin={SetLogin} />
+      <Navbar SetLogin={SetLogin} IsScrolled={IsScrolled} />
       <div
         className="MovieInfo"
         style={{ backgroundImage: `url(${Data.Images})` }}
@@ -96,10 +96,10 @@ function MovieInfo({ SetLogin }) {
             <Link to={`/watch/${Data.id}`}>WAtch Now</Link>
           </div>
           <div className="Gallary">
-            <h1 className="main-titel">Screen Shots</h1>
+            <h1 className="main-titel-section">Screen Shots</h1>
             <div className="swiper-container">
               <Swiper
-                modules={[Navigation, Pagination, Scrollbar, A11y]}
+                modules={[Pagination]}
                 breakpoints={{
                   350: {
                     slidesPerView: 1,
@@ -113,7 +113,9 @@ function MovieInfo({ SetLogin }) {
                   },
                 }}
                 spaceBetween={10}
-                onSlideChange={(e) => SetProgress(e.progress * 100)}
+                pagination={{
+                  clickable: true,
+                }}
               >
                 {Data.Images?.map((Movie, index) => (
                   <SwiperSlide key={index}>
@@ -123,13 +125,6 @@ function MovieInfo({ SetLogin }) {
                   </SwiperSlide>
                 ))}
               </Swiper>
-            </div>
-
-            <div className="progress">
-              <span
-                className="propress-per"
-                style={{ width: `${Progress}%` }}
-              />
             </div>
           </div>
         </div>

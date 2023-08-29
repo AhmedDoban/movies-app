@@ -2,14 +2,10 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 
-function Navbar({ SetLogin }) {
+function Navbar({ SetLogin, IsScrolled }) {
   const Navigate = useNavigate();
-  const [IsScrolled, SetIsScrolled] = useState(false);
   const [Active, SetActive] = useState(false);
-  window.onscroll = () => {
-    SetIsScrolled(window.pageYOffset === 0 ? false : true);
-    return () => (window.onscroll = null);
-  };
+
   const HandleLogout = () => {
     localStorage.clear();
     SetLogin(false);
@@ -30,7 +26,7 @@ function Navbar({ SetLogin }) {
                 ></i>
               ) : null}
               <li>
-                <NavLink to="/">Homepage</NavLink>
+                <NavLink to="/">Home</NavLink>
               </li>
               <li>
                 <Link to="">Series</Link>
@@ -39,7 +35,7 @@ function Navbar({ SetLogin }) {
                 <Link to="">Movies</Link>
               </li>
               <li>
-                <Link to="">New and popular</Link>
+                <Link to="">News</Link>
               </li>
               <li>
                 <Link to="">my list</Link>

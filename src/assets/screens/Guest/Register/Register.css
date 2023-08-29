@@ -28,7 +28,7 @@
 }
 .register .top h1 {
   position: relative;
-  color: red;
+  color: var(--red-color);
   text-transform: uppercase;
   font-weight: 1000;
   font-size: 40px;
@@ -40,7 +40,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: red;
+  background-color: var(--red-color);
   border: 0;
   border-radius: var(--main-border-radius);
   color: #fff;
@@ -60,7 +60,7 @@
 .register .container h1 {
   position: relative;
   font-weight: bold;
-  color: red;
+  color: var(--red-color);
   font-size: 40px;
   text-align: center;
 }
@@ -126,7 +126,7 @@
   width: 150px;
   padding: 8px 12px;
   border: 0;
-  background-color: red;
+  background-color: var(--red-color);
   color: #fff;
   cursor: pointer;
   border-radius: 5px;

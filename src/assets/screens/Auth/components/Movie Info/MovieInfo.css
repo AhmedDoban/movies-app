@@ -98,7 +98,7 @@
   color: #eee;
 }
 .MovieInfo .container .box > .right .top > .left .Type span {
-  color: red;
+  color: var(--red-color);
 }
 .MovieInfo .container .box > .right .top > .left .Titel {
   position: relative;
@@ -296,7 +296,7 @@
   padding: 12px 15px;
   border-radius: 20px;
   letter-spacing: 5px;
-  background-color: red;
+  background-color: var(--red-color);
   color: #fff;
   border: 1px solid red;
   cursor: pointer;
@@ -316,25 +316,6 @@
   flex-direction: column;
   gap: 10px;
   padding-bottom: var(--main-padding-bottom);
-}
-.Gallary .main-titel {
-  writing-mode: horizontal-tb;
-  height: fit-content;
-  width: fit-content;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.Gallary .main-titel::before {
-  position: absolute;
-  content: "";
-  width: 5px;
-  height: 100%;
-  background-color: red;
-  top: 0;
-  left: 0;
-  border-radius: 15px;
 }
 .Gallary .ImgGallary {
   position: relative;
@@ -367,6 +348,6 @@
   top: 0;
   left: 0;
   height: 100%;
-  background-color: red;
+  background-color: var(--red-color);
   transition: var(--main-transition);
 }

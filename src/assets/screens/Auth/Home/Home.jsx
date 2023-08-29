@@ -5,23 +5,18 @@ import Landing from "./landing/Landing";
 import SectionSlider from "../components/Section Slider/SectionSlider";
 import News from "../components/News/News";
 import Footer from "../components/Footer/Footer";
+import Popular from "./Popular/Popular";
 
-function Home({ SetLogin }) {
+function Home({ SetLogin, IsScrolled }) {
   return (
     <React.Fragment>
       <div className="home">
-        <Navbar SetLogin={SetLogin} />
+        <Navbar SetLogin={SetLogin} IsScrolled={IsScrolled} />
         <Landing />
-        <SectionSlider start="0" end="8" main_titel="Popular" Style="Left" />
+        <Popular />
+        <SectionSlider start="0" end="8" main_titel="May you like " />
         <News start="0" end="4" />
-        <SectionSlider start="2" end="16" main_titel="Trending" />
-        <News start="9" end="15" />
-        <SectionSlider
-          start="4"
-          end="16"
-          main_titel="official Box"
-          Style="Left"
-        />
+
         <Footer />
       </div>
     </React.Fragment>

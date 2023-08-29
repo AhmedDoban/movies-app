@@ -6,7 +6,7 @@
   width: 100%;
   padding-top: var(--main-padding-top);
   padding-bottom: var(--main-padding-bottom);
-  background-color: #00000077;
+  background-color: var(--main-color);
   backdrop-filter: blur(50px);
 }
 .Footer .container {
@@ -27,7 +27,7 @@
 }
 .Footer .container .box h1.Logo {
   position: relative;
-  color: red;
+  color: var(--red-color);
   font-size: 35px;
 }
 .Footer .container .box .social {
@@ -50,7 +50,7 @@
   cursor: pointer;
 }
 .Footer .container .box .social i:hover {
-  background-color: red;
+  background-color: var(--red-color);
   border: 1px solid red;
   color: #fff;
 }
@@ -69,5 +69,5 @@
 }
 .Footer .container .box ul li:hover {
   padding: 0 0 0 10px;
-  color: red;
+  color: var(--red-color);
 }

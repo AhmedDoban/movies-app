@@ -24,7 +24,7 @@
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: red;
+  background: var(--red-color);
 }
 
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
@@ -91,22 +91,32 @@ p {
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 # main titel 
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
-.main-titel {
+.main-titel-section {
   position: relative;
-  color: red;
-  font-size: 30px;
-  writing-mode: vertical-lr;
-  width: fit-content;
-  padding: 150px 0 0 0;
-  text-transform: capitalize;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 0 0 10px 0;
 }
-.main-titel::before {
+.main-titel-section h1 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+.main-titel-section::before {
   position: absolute;
   content: "";
-  width: 5px;
-  height: 150px;
-  background-color: red;
-  top: -15px;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
+  left: 0;
+  height: 1px;
+  bottom: 0;
+  background: linear-gradient(
+    32deg,
+    var(--red-color) 0%,
+    var(--main-color) 100%
+  );
 }

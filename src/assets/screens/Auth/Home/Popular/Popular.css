@@ -1,0 +1,146 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Popular
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.popular {
+  position: relative;
+  width: 100%;
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  overflow: hidden;
+}
+.popular .main-titel-section .input-search {
+  position: relative;
+  min-width: 350px;
+  max-width: 100%;
+  padding: 10px;
+  border: 1px solid gray;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+@media (max-width: 992px) {
+  .popular .main-titel-section .input-search {
+    width: 100%;
+  }
+}
+.popular .main-titel-section .input-search input {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+}
+.popular .main-titel-section .input-search input + i {
+  transition: var(--main-transition);
+  color: gray;
+}
+.popular .main-titel-section .input-search input:focus + i {
+  color: var(--red-color);
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Popular filter
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.popular .filter {
+  position: relative;
+  color: #fff;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.popular .filter li {
+  background-color: var(--main-alt-color);
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: var(--main-transition);
+  cursor: pointer;
+}
+.popular .filter li.active {
+  background-color: var(--red-color);
+  box-shadow: 0px 0px 50px 1px var(--red-color);
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Popular  popular-mavies-container
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.popular .popular-mavies-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+@media (max-width: 670px) {
+  .popular .popular-mavies-container {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+.popular .popular-mavies-container .card {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.popular .popular-mavies-container .card .poster {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.popular .popular-mavies-container .card .poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.popular .popular-mavies-container .card .data {
+  position: relative;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.popular .popular-mavies-container .card .data h1 {
+  color: #fff;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+.popular .popular-mavies-container .card .data .other {
+  color: #888;
+  display: flex;
+  gap: 10px;
+  font-size: 12px;
+  align-items: center;
+  font-weight: normal;
+}
+.popular .popular-mavies-container .card .data .other p {
+  font-size: 12px;
+  font-weight: normal;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Popular  seemore
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.popular .seemore {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0 0 0;
+}
+.popular .seemore button {
+  color: var(--red-color);
+  transition: var(--main-transition);
+  font-size: 18px;
+  font-weight: bold;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  letter-spacing: 1px;
+}

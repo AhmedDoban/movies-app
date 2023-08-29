@@ -4,8 +4,10 @@ import "./Landing.css";
 import { Link } from "react-router-dom";
 function Landing() {
   const [movie, SetMovie] = useState({});
+
   useEffect(() => {
-    SetMovie(Movies.sort(() => Math.random() - 0.5)[0]);
+    const NewData = [...Movies];
+    SetMovie(NewData.sort(() => Math.random() - 0.5)[0]);
   }, []);
 
   return (

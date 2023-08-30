@@ -145,19 +145,18 @@
 }
 .navbar .right .user .options {
   position: absolute;
-  width: 150px;
+  width: 200px;
   display: flex;
   flex-direction: column;
   gap: 5px;
-  top: calc(100% + 1px);
+  top: calc(100%);
   right: 0;
   transition: var(--main-transition);
   padding: 10px 5px;
-  border-radius: 5px;
-  opacity: 0;
-  background-color: #000000ac;
+  border-radius: 1px;
+  background-color: #fff;
   backdrop-filter: blur(50px);
-  z-index: -9999;
+  display: none;
 }
 
 .navbar .right .user .options li a,
@@ -167,7 +166,7 @@
   display: flex;
   align-items: center;
   padding: 4px;
-  color: #fff;
+  color: var(--main-color);
   background-color: transparent;
   border: 0;
   text-align: left;
@@ -175,8 +174,8 @@
   font-weight: 400;
   cursor: pointer;
   transition: var(--main-transition);
-  letter-spacing: 1.2px;
-  font-weight: 600;
+  letter-spacing: 1px;
+  font-weight: bold;
 }
 .navbar .right .user .options li a:hover,
 .navbar .right .user .options li button:hover {
@@ -198,6 +197,5 @@
   cursor: pointer;
 }
 .navbar .right .user:hover .options {
-  opacity: 1;
-  z-index: 9999;
+  display: flex;
 }

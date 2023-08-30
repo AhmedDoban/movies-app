@@ -21,7 +21,6 @@ function Booking() {
       label: item.Title,
     }));
     Setoptions(modiData);
-    console.log(modiData);
   }, []);
 
   return (
@@ -45,9 +44,7 @@ function Booking() {
           </div>
           <div className="input-select">
             <label htmlFor="Date">
-              {dateBooking === ""
-                ? "Select an Date "
-                : dateBooking.toString()}
+              {dateBooking === "" ? "Select an Date " : dateBooking.toString()}
             </label>
             <i
               className="fa-solid fa-calendar-days"

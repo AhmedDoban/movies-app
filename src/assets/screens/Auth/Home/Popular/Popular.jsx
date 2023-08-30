@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Popular.css";
 import { Movies } from "../../../../../Movies_db";
 import { Link } from "react-router-dom";
+import Skeleton from "../../components/Skeleton/Skeleton";
 
 function Popular() {
   const [Filter, SetFilter] = useState("");
@@ -21,6 +22,17 @@ function Popular() {
     },
   ]);
   const [Seemore, SetSeemore] = useState(10);
+  const [loading, setLoading] = useState(false);
+  const [MoviesData, setMoviesData] = useState([]);
+
+  useEffect(() => {
+    setLoading(true);
+    const timer = setTimeout(() => {
+      setMoviesData(Movies);
+      setLoading(false);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <React.Fragment>
@@ -39,6 +51,7 @@ function Popular() {
               <i className="fa-solid fa-magnifying-glass" />
             </label>
           </div>
+
           <ul className="filter">
             <li
               className={Filter === "" ? "active" : ""}
@@ -55,34 +68,41 @@ function Popular() {
               </li>
             ))}
           </ul>
+
           <div className="popular-mavies-container">
-            {Movies.filter((movies) =>
-              SearchInput === ""
-                ? movies
-                : movies.Title.toLowerCase().includes(SearchInput.toLowerCase())
-            )
-              .filter((movies) =>
-                Filter === ""
+            {loading ? (
+              <Skeleton count={Seemore} />
+            ) : (
+              MoviesData.filter((movies) =>
+                SearchInput === ""
                   ? movies
-                  : movies.Genre.toLowerCase().includes(Filter.toLowerCase())
+                  : movies.Title.toLowerCase().includes(
+                      SearchInput.toLowerCase()
+                    )
               )
-              .slice(0, Seemore)
-              .map((movie) => (
-                <Link className="card" to={`/${movie.id}`}>
-                  <div className="poster">
-                    <img src={movie.Poster} alt={movie.Title} />
-                  </div>
-                  <div className="data">
-                    <h1>{movie.Title}</h1>
-                    <div className="other">
-                      <p>{movie.Runtime}</p> | <p>{movie.Genre}</p>
+                .filter((movies) =>
+                  Filter === ""
+                    ? movies
+                    : movies.Genre.toLowerCase().includes(Filter.toLowerCase())
+                )
+                .slice(0, Seemore)
+                .map((movie) => (
+                  <Link className="card" to={`/${movie.id}`}>
+                    <div className="poster">
+                      <img src={movie.Poster} alt={movie.Title} />
                     </div>
-                  </div>
-                </Link>
-              ))}
+                    <div className="data">
+                      <h1>{movie.Title}</h1>
+                      <div className="other">
+                        <p>{movie.Runtime}</p> | <p>{movie.Genre}</p>
+                      </div>
+                    </div>
+                  </Link>
+                ))
+            )}
           </div>
           <div className="seemore">
-            {Movies.filter((movies) =>
+            {MoviesData.filter((movies) =>
               SearchInput === ""
                 ? movies
                 : movies.Title.toLowerCase().includes(SearchInput.toLowerCase())

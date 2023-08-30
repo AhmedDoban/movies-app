@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 function Popular() {
   const [Filter, SetFilter] = useState("");
+  const [SearchInput, SetSearchInput] = useState("");
   const [FilterData, SetFilterData] = useState([
     {
       name: "Drama",
@@ -32,8 +33,8 @@ function Popular() {
                 type="search"
                 id="searchMovie"
                 placeholder="Search..."
-                value={Filter}
-                onChange={(e) => SetFilter(e.target.value)}
+                value={SearchInput}
+                onChange={(e) => SetSearchInput(e.target.value)}
               />
               <i className="fa-solid fa-magnifying-glass" />
             </label>
@@ -56,10 +57,15 @@ function Popular() {
           </ul>
           <div className="popular-mavies-container">
             {Movies.filter((movies) =>
-              Filter === ""
+              SearchInput === ""
                 ? movies
-                : movies.Title.toLowerCase().includes(Filter.toLowerCase())
+                : movies.Title.toLowerCase().includes(SearchInput.toLowerCase())
             )
+              .filter((movies) =>
+                Filter === ""
+                  ? movies
+                  : movies.Genre.toLowerCase().includes(Filter.toLowerCase())
+              )
               .slice(0, Seemore)
               .map((movie) => (
                 <Link className="card" to={`/${movie.id}`}>
@@ -77,9 +83,13 @@ function Popular() {
           </div>
           <div className="seemore">
             {Movies.filter((movies) =>
+              SearchInput === ""
+                ? movies
+                : movies.Title.toLowerCase().includes(SearchInput.toLowerCase())
+            ).filter((movies) =>
               Filter === ""
                 ? movies
-                : movies.Title.toLowerCase().includes(Filter.toLowerCase())
+                : movies.Genre.toLowerCase().includes(Filter.toLowerCase())
             ).length <= Seemore ? null : (
               <button onClick={() => SetSeemore(Seemore + 8)}>More...</button>
             )}

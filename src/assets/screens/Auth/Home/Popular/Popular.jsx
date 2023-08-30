@@ -59,10 +59,11 @@ function Popular() {
             >
               All
             </li>
-            {FilterData.map((filter) => (
+            {FilterData.map((filter, index) => (
               <li
                 className={Filter === filter.name ? "active" : ""}
                 onClick={() => SetFilter(filter.name)}
+                key={index}
               >
                 {filter.name}
               </li>
@@ -87,7 +88,7 @@ function Popular() {
                 )
                 .slice(0, Seemore)
                 .map((movie) => (
-                  <Link className="card" to={`/${movie.id}`}>
+                  <Link className="card" to={`/${movie.id}`} key={movie.id}>
                     <div className="poster">
                       <img src={movie.Poster} alt={movie.Title} />
                     </div>

@@ -10,8 +10,8 @@ function Skeleton({ count }) {
 
   return (
     <React.Fragment>
-      {ArrayCount.map((length) => (
-        <div className="skeleton">
+      {ArrayCount.map((length, index) => (
+        <div className="skeleton" key={index}>
           <div className="card">
             <div className="img"></div>
             <div className="titel"></div>

@@ -1,0 +1,84 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# booking
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.booking {
+  position: relative;
+  width: 100%;
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+}
+.booking .container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.booking .container .input-box {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+  border-radius: 2px;
+  padding: 0;
+}
+.booking .container .input-box input {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+  border-radius: 2px;
+  background-color: transparent;
+  color: #fff;
+}
+.booking .container label {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.booking .container .input-select {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid gray;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  cursor: pointer;
+  border-radius: 2px;
+  background-color: transparent;
+  color: #fff;
+}
+.booking .container .input-select .Date {
+  position: absolute;
+  z-index: -8888;
+  right: 0;
+  top: 100%;
+}
+.booking .container .input-select .Date.active {
+  z-index: 1;
+}
+.booking .container .input-box button {
+  width: 100%;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: var(--main-border-radius);
+  background-color: var(--red-color);
+  color: #fff;
+  transition: var(--main-transition);
+}
+
+.Dropdown-control {
+  background-color: transparent !important;
+  border: 1px solid gray !important;
+  color: #fff !important;
+  font-size: 14px !important;
+  font-weight: bold;
+}

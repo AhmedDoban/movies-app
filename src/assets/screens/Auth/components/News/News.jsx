@@ -34,7 +34,7 @@ function News({ start, end }) {
             }}
           >
             {Movies.slice(start, end).map((movie) => (
-              <SwiperSlide>
+              <SwiperSlide key={movie.id}>
                 <div className="box">
                   <div className="newsimg">
                     <img src={movie.Images} alt={movie.Title} />

@@ -100,6 +100,7 @@ p {
   gap: 10px;
   flex-wrap: wrap;
   padding: 0 0 10px 0;
+  margin-bottom: 15px;
 }
 .main-titel-section h1 {
   color: #fff;
